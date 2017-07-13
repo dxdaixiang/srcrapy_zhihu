@@ -69,6 +69,7 @@ DEFAULT_REQUEST_HEADERS = {
 ITEM_PIPELINES = {
 #    'zhihu.pipelines.ZhihuPipeline': 300,
     'zhihu.pipelines.MongoPipeline':300,
+    'scrapy_redis.pipelines.RedisPipeline': 301
 }
 MONGO_URI = 'localhost'
 MONGO_DATABASE = 'dx'
@@ -93,3 +94,6 @@ MONGO_DATABASE = 'dx'
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+REDIS_URL = 'redis://root:daixiang@104.194.88.242:6379'

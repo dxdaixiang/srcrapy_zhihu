@@ -51,3 +51,6 @@ class ZhihuProjectSpider(scrapy.Spider):
 
     # def parse(self, response):
     #     print(response.text)
+
+
+# This is scrapy zhihu
